@@ -1,1 +1,1 @@
-# shitara-landing-page
+# shitara-pet
