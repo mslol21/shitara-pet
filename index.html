@@ -28,7 +28,7 @@
       Rações, medicamentos e acessórios com o melhor preço e atendimento da cidade.  
       Nota <strong>4.8 ⭐</strong> em mais de 660 avaliações no Google!
     </p>
-    <a href="https://shitarapetshop.lojavirtualnuvem.com.br/" target="_blank" class="inline-block mt-6 bg-red-600 text-white px-6 py-3 rounded-lg shadow hover:bg-red-700 transition">
+    <a href="https://www.ifood.com.br/delivery/ribeirao-preto-sp/shitara-pet-shop-jardim-anhanguera/71559bcc-3329-4b3b-a9e7-9d89870613db" target="_blank" class="inline-block mt-6 bg-red-600 text-white px-6 py-3 rounded-lg shadow hover:bg-red-700 transition">
       🛒 Visite nossa Loja Online
     </a>
   </section>
@@ -45,7 +45,7 @@
       <ul class="list-disc list-inside text-gray-700 ml-4">
         <li>Segunda a Sexta: 8h às 18h</li>
         <li>Sábado: 8h às 13h</li>
-        <li>Domingo: Fechado</li>
+        <li>Domingos e feriados: Fechado</li>
       </ul>
     </div>
   </section>
@@ -81,11 +81,41 @@
   <section id="avaliacoes" class="max-w-6xl mx-auto px-6 py-12 text-center">
     <h3 class="text-2xl font-bold text-red-600 mb-4">O que nossos clientes dizem</h3>
     <p class="text-gray-700 mb-6">⭐ Avaliação 4.8 / 5 com mais de 660 comentários positivos!</p>
-    <blockquote class="italic text-gray-600 max-w-3xl mx-auto">
-      “Excelente atendimento e ótimos preços! Sempre encontro tudo o que preciso para meus pets.”
-      <br>— Cliente satisfeito no Google Maps
-    </blockquote>
+
+    <!-- Container das avaliações -->
+    <div class="relative overflow-hidden">
+      <div id="carrossel" class="transition-transform duration-700 ease-in-out">
+        <!-- Avaliação 1 -->
+        <blockquote class="italic text-gray-600 max-w-3xl mx-auto">
+          “Excelente atendimento e ótimos preços! Sempre encontro tudo o que preciso para meus pets.”
+          <br>— Cliente satisfeito no Google Maps
+        </blockquote>
+        <!-- Avaliação 2 -->
+        <blockquote class="italic text-gray-600 max-w-3xl mx-auto hidden">
+          “Equipe muito atenciosa! Recomendo demais.”
+          <br>— Mariana S., Google Maps
+        </blockquote>
+        <!-- Avaliação 3 -->
+        <blockquote class="italic text-gray-600 max-w-3xl mx-auto hidden">
+          “Produtos de qualidade e entrega rápida!”
+          <br>— João P., Google Maps
+        </blockquote>
+      </div>
+    </div>
   </section>
+
+  <script>
+    const avaliacoes = document.querySelectorAll('#carrossel blockquote');
+    let indice = 0;
+  
+    function mostrarProxima() {
+      avaliacoes[indice].classList.add('hidden');
+      indice = (indice + 1) % avaliacoes.length;
+      avaliacoes[indice].classList.remove('hidden');
+    }
+  
+    setInterval(mostrarProxima, 4000); // troca a cada 4 segundos
+  </script>
 
   <section id="contato" class="bg-red-600 text-white py-12">
     <div class="max-w-6xl mx-auto px-6 text-center">
@@ -97,9 +127,6 @@
         </a>
         <a href="https://www.instagram.com/shitara.petshop" target="_blank" class="bg-white text-red-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
           📸 Instagram
-        </a>
-        <a href="https://www.facebook.com/ShitaraPetStore" target="_blank" class="bg-white text-red-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">
-          👍 Facebook
         </a>
       </div>
     </div>
